@@ -51,3 +51,28 @@ cardsContainer
     "body > div > div:nth-child(6) > div:nth-child(3) > div > div > a"
   )
   .setAttribute("style", "background-color: #28a744; border: none");
+
+// LISTA
+const listItems = document.querySelector(".list-group");
+
+listItems.querySelectorAll("li").forEach((el) => el.remove());
+
+const positions = {
+  0: "Primeiro",
+  1: "Segundo",
+  2: "Terceiro",
+  3: "Quarto",
+  4: "Quinto",
+};
+
+for (let i = 0; i < Object.keys(positions).length; i++) {
+  const li = document.createElement("li");
+  li.classList.add(`list-group-item`);
+
+  if (i === 3) {
+    li.classList.add(`active`);
+  }
+
+  li.textContent = `${positions[i]} item`;
+  listItems.appendChild(li);
+}
