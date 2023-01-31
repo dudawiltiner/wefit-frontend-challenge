@@ -33,4 +33,21 @@ const hedaerHR = hedaerContainer.querySelector(".my-4");
 hedaerHR.setAttribute("style", "width: 100%;");
 
 const hedaerA = hedaerContainer.querySelector("a");
-hedaerA.setAttribute("style", "background-color: green; border: none");
+hedaerA.setAttribute("style", "background-color: #28a744; border: none");
+
+// CARDS
+const cardsContainer = document.querySelector("body > div > div:nth-child(6)");
+const cards = document.querySelectorAll("div.col-lg-3");
+
+cards.forEach((el) => el.remove());
+
+cardsContainer.appendChild(cards[3]);
+cardsContainer.appendChild(cards[0]);
+cardsContainer.appendChild(cards[2]);
+cardsContainer.appendChild(cards[1]);
+
+cardsContainer
+  .querySelector(
+    "body > div > div:nth-child(6) > div:nth-child(3) > div > div > a"
+  )
+  .setAttribute("style", "background-color: #28a744; border: none");
