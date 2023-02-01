@@ -1,3 +1,5 @@
+import HomeTemplate from '../../components/template/HomeTemplate'
+
 export default function Home() {
-  return <div style={{ color: 'red' }}>Home</div>
+  return <HomeTemplate />
 }
