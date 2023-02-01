@@ -65,7 +65,7 @@ Para o desafio do JavaScript eu tentei resolver os testes diferentes formas usan
 
 6. Realize o start da API.
 ```javascript
-  json-server --watch services/db.json
+  json-server --watch src/services/db.json
 ```
 
 7. Realize o start da Aplicacao.
