@@ -5,7 +5,11 @@ export const Container = styled.div`
   margin-bottom: 16px;
 `
 
-export const Price = styled.div``
+export const Price = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+`
 
 export const TitleAndPriceContainer = styled.div`
   width: 100%;
