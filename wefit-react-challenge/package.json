@@ -9,7 +9,6 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "server": "json-server --watch src/services/db.json",
-    "husky": "husky",
     "check-types": "tsc --pretty --noEmit",
     "check-format": "prettier --check .",
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
@@ -27,8 +26,6 @@
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.5",
-    "@commitlint/config-conventional": "^17.6.5",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@types/styled-components": "^5.1.26",
