@@ -1,11 +1,11 @@
-import { useQuery } from 'react-query'
-import { api } from '../../../services/ApiConnection'
-import { Product } from './types'
+import { useQuery } from 'react-query';
+import { api } from '../../../services/ApiConnection';
+import { Product } from './types';
 
 async function fetchGetProducts(): Promise<Product[]> {
-  const { data } = await api.get(`/products`)
+  const { data } = await api.get(`/products`);
 
-  return data
+  return data;
 }
 
 export function useGetProducts() {
@@ -13,11 +13,11 @@ export function useGetProducts() {
     ['products'],
     () => fetchGetProducts(),
     { refetchOnWindowFocus: false }
-  )
+  );
 
   return {
     data,
     isLoading,
-    error
-  }
+    error,
+  };
 }

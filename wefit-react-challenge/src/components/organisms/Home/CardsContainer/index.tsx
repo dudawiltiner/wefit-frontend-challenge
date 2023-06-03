@@ -1,13 +1,13 @@
-import { useAtom } from 'jotai'
-import { useGetProducts } from '../../../../hooks/Home/use-get-products'
-import { productsSelectedAt } from '../../../../store'
-import Card from '../../../molecules/Home/Card'
-import * as S from './styles'
+import { useAtom } from 'jotai';
+import { useGetProducts } from '../../../../hooks/Home/use-get-products';
+import { productsSelectedAt } from '../../../../store';
+import Card from '../../../molecules/Home/Card';
+import * as S from './styles';
 
 export default function CardsContainer() {
-  const { data } = useGetProducts()
+  const { data } = useGetProducts();
 
-  const [productsSelected, setProductsSelected] = useAtom(productsSelectedAt)
+  const [productsSelected, setProductsSelected] = useAtom(productsSelectedAt);
 
   return (
     <S.Container>
@@ -29,5 +29,5 @@ export default function CardsContainer() {
         ))}
       </S.Wrapper>
     </S.Container>
-  )
+  );
 }
