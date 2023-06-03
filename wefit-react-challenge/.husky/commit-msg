@@ -4,7 +4,7 @@
 npx --no -- commitlint --edit ${1}
 
 if [ $? -eq 0 ]; then
-  # Obtenção do tipo do commit
+  # Obtenção do tipo do comm
   commit_msg=$(cat "$1")
 
   # Definir o tipo de commit
