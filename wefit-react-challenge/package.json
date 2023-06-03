@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "prepare": "husky install",
     "dev": "vite",
     "commit": "git-cz",
     "build": "tsc && vite build",
