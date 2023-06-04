@@ -1,4 +1,4 @@
 export interface ScreenButtonProps {
-  name: string
-  link: string
+  name: string;
+  link: string;
 }

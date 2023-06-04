@@ -1,4 +1,4 @@
-import { CardImage, CardPrice, CardTitle } from '../../../Home/Cards';
+import { CardImage, CardPrice, CardTitle } from '@components/atoms/Home/Cards';
 import * as S from './styles';
 import { ProductProps } from './types';
 

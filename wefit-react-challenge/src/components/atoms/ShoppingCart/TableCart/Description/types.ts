@@ -1,3 +1,3 @@
 export interface DescriptionProps {
-  name: string
+  name: string;
 }

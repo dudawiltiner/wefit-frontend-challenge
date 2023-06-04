@@ -1,3 +1,3 @@
 export interface BasketStatusProps {
-  qtd: number
+  qtd: number;
 }

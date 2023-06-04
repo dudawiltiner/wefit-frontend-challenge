@@ -1,10 +1,10 @@
-import axios from 'axios'
+import axios from 'axios';
 export function createConnection() {
   const api = axios.create({
-    baseURL: 'http://localhost:3000'
-  })
+    baseURL: 'http://localhost:3000',
+  });
 
-  return api
+  return api;
 }
 
-export const api = createConnection()
+export const api = createConnection();

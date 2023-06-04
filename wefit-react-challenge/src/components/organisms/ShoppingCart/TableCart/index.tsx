@@ -1,39 +1,21 @@
-import { useAtom } from 'jotai';
-import { useGetProducts } from '../../../../hooks/Home/use-get-products';
-import { productsSelectedAt } from '../../../../store';
-import Footer from '../../../molecules/ShoppingCart/TableCart/Footer';
-import Header from '../../../molecules/ShoppingCart/TableCart/Header';
-import Item from '../../../molecules/ShoppingCart/TableCart/Item';
-import ItemMobile from '../../../molecules/ShoppingCart/TableCart/ItemMobile';
+import {
+  Footer,
+  Header,
+  Item,
+  ItemMobile,
+} from '@components/molecules/ShoppingCart';
+import { useTableCart } from '@hooks/Home/use-table-cart';
 import * as S from './styles';
 
 export default function TableCart() {
-  const { data } = useGetProducts();
-  const [productsSelected, setProductsSelected] = useAtom(productsSelectedAt);
-
-  function calculateTotal() {
-    let total = 0;
-
-    data?.forEach((product) => {
-      const qtd = productsSelected.filter((el) => el === product.id).length;
-
-      if (qtd) {
-        total += qtd * product.price;
-      }
-    });
-
-    return total;
-  }
-
-  const total = calculateTotal();
-
-  function removeItem(id: number) {
-    const list = productsSelected;
-
-    list.splice(list.indexOf(id), 1);
-
-    setProductsSelected([...list]);
-  }
+  const {
+    data,
+    removeItem,
+    addItem,
+    removeAllItens,
+    calculateTotalValue,
+    getFilteredSelectedProductsQtd,
+  } = useTableCart();
 
   return (
     <S.Container>
@@ -41,25 +23,16 @@ export default function TableCart() {
         <S.MobileContainer>
           {data?.map((product) => (
             <>
-              {productsSelected.filter((el) => el === product.id).length !==
-                0 && (
+              {getFilteredSelectedProductsQtd(product.id) !== 0 && (
                 <ItemMobile
                   key={product.id}
-                  image={product.image}
-                  title={product.title}
-                  price={product.price}
-                  qtd={
-                    productsSelected.filter((el) => el === product.id).length
-                  }
+                  product={product}
+                  selectedProductsQtd={getFilteredSelectedProductsQtd(
+                    product.id
+                  )}
                   handleSub={() => removeItem(product.id)}
-                  handleAdd={() =>
-                    setProductsSelected([...productsSelected, product.id])
-                  }
-                  handleRemoveAll={() =>
-                    setProductsSelected([
-                      ...productsSelected.filter((el) => el !== product.id),
-                    ])
-                  }
+                  handleAdd={() => addItem(product.id)}
+                  handleRemoveAll={() => removeAllItens(product.id)}
                 />
               )}
             </>
@@ -71,33 +44,23 @@ export default function TableCart() {
           <tbody>
             {data?.map((product) => (
               <>
-                {productsSelected.filter((el) => el === product.id).length !==
-                  0 && (
+                {getFilteredSelectedProductsQtd(product.id) !== 0 && (
                   <Item
                     key={product.id}
-                    image={product.image}
-                    title={product.title}
-                    price={product.price}
-                    qtd={
-                      productsSelected.filter((el) => el === product.id).length
-                    }
+                    product={product}
+                    selectedProductsQtd={getFilteredSelectedProductsQtd(
+                      product.id
+                    )}
                     handleSub={() => removeItem(product.id)}
-                    handleAdd={() =>
-                      setProductsSelected([...productsSelected, product.id])
-                    }
-                    handleRemoveAll={() =>
-                      setProductsSelected([
-                        ...productsSelected.filter((el) => el !== product.id),
-                      ])
-                    }
+                    handleAdd={() => addItem(product.id)}
+                    handleRemoveAll={() => removeAllItens(product.id)}
                   />
                 )}
               </>
             ))}
           </tbody>
         </S.DeskTable>
-
-        <Footer total={total} />
+        <Footer total={calculateTotalValue()} />
       </S.Wrapper>
     </S.Container>
   );

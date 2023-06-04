@@ -1,13 +1,11 @@
-import { CardPrice } from '../../../../atoms/Home/Cards';
-import { InputNumber, Product } from '../../../../atoms/ShoppingCart/TableCart';
+import { CardPrice } from '@components/atoms/Home/Cards';
+import { InputNumber, Product } from '@components/atoms/ShoppingCart/TableCart';
 import * as S from './styles';
 import { ItemProps } from './types';
 
 export default function Item({
-  image,
-  title,
-  qtd,
-  price,
+  product,
+  selectedProductsQtd,
   handleSub,
   handleAdd,
   handleRemoveAll,
@@ -15,27 +13,26 @@ export default function Item({
   return (
     <tr>
       <td>
-        <Product image={image} title={title} price={price} />
+        <Product
+          image={product.image}
+          title={product.title}
+          price={product.price}
+        />
       </td>
       <td>
-        <InputNumber handleSub={handleSub} handleAdd={handleAdd} value={qtd} />
+        <InputNumber
+          handleSub={handleSub}
+          handleAdd={handleAdd}
+          value={selectedProductsQtd}
+        />
       </td>
       <S.Price>
-        <CardPrice number={qtd * price} />
+        <CardPrice number={selectedProductsQtd * product.price} />
       </S.Price>
       <td>
-        <button
-          onClick={handleRemoveAll}
-          style={{
-            display: 'flex',
-            justifyContent: 'end',
-            background: 'transparent',
-            border: 'none',
-            cursor: 'pointer',
-          }}
-        >
+        <S.RemoveButton onClick={handleRemoveAll}>
           <img src="src/assets/trash.png" />
-        </button>
+        </S.RemoveButton>
       </td>
     </tr>
   );

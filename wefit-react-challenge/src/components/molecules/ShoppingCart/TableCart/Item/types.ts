@@ -1,9 +1,9 @@
+import { Product } from '@hooks/Home/use-get-products/types';
+
 export interface ItemProps {
-  title: string
-  image: string
-  qtd: number
-  price: number
-  handleSub: () => void
-  handleAdd: () => void
-  handleRemoveAll: () => void
+  selectedProductsQtd: number;
+  product: Product;
+  handleSub: () => void;
+  handleAdd: () => void;
+  handleRemoveAll: () => void;
 }

@@ -12,7 +12,6 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
   width: 100%;
   max-width: 960px;
   margin-top: 24px;
@@ -28,39 +27,11 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Input = styled.input`
-  flex: 1;
+export const LoadingContainer = styled.div`
   width: 100%;
-  height: 52px;
-  padding: 16px;
-  border-radius: 8px 0px 0px 8px;
-  background-color: #ffff;
-  border: 0px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color: #2f2e41;
-
-  ::placeholder {
-    color: #c0c0c0;
-  }
-`;
-
-export const SearchedText = styled.div`
+  height: 70vh;
   display: flex;
-  color: #ffff;
-  width: 100%;
-  margin-top: 24px;
+  justify-content: center;
+  align-items: center;
   max-width: 960px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  justify-content: space-between;
-
-  @media (max-width: 524px) {
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 16px;
-  }
 `;

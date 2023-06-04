@@ -1,3 +1,3 @@
 export interface ScreenImageProps {
-  link: string
+  link: string;
 }

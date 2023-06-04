@@ -1,10 +1,10 @@
 import {
   BasketImage,
   DescriptionBasket,
-  QtdItens
-} from '../../../../atoms/General/Menu'
-import * as S from './styles'
-import { BasketStatusProps } from './types'
+  QtdItens,
+} from '@components/atoms/General/Menu';
+import * as S from './styles';
+import { BasketStatusProps } from './types';
 
 export default function BasketStatus({ qtd }: BasketStatusProps) {
   return (
@@ -15,5 +15,5 @@ export default function BasketStatus({ qtd }: BasketStatusProps) {
       </S.Wrapper>
       <BasketImage />
     </S.GoCartLink>
-  )
+  );
 }

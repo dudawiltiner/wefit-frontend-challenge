@@ -7,3 +7,11 @@ export const Price = styled.td`
     width: 18%;
   }
 `;
+
+export const RemoveButton = styled.button`
+  display: flex;
+  justify-content: end;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+`;

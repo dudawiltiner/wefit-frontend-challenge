@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const LoadingStyled = styled.img`
   animation: spin 1s linear infinite;
@@ -8,4 +8,4 @@ export const LoadingStyled = styled.img`
       transform: rotate(360deg);
     }
   }
-`
+`;

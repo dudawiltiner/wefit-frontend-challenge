@@ -1,8 +1,8 @@
+import { Product } from '@hooks/Home/use-get-products/types';
+
 export interface CardProps {
-  link: string
-  title: string
-  price: number
-  qtd: number
-  selected: boolean
-  handleSelect: () => void
+  product: Product;
+  selectedProductsQtd: number;
+  selected: boolean;
+  handleSelect: () => void;
 }

@@ -1,4 +1,4 @@
-export type ThemeType = typeof theme
+export type ThemeType = typeof theme;
 
 export const theme = {
   colors: {
@@ -7,6 +7,6 @@ export const theme = {
     darkGray: '#333333',
     darkBlue: '#2F2E41',
     lightBlue: '#009EDD',
-    green: '#039B00'
-  }
-}
+    green: '#039B00',
+  },
+};

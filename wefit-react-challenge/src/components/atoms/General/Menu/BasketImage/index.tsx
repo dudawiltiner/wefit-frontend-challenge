@@ -6,5 +6,5 @@ export default function BasketImage() {
       height={'25px'}
       alt="Basket Image"
     />
-  )
+  );
 }

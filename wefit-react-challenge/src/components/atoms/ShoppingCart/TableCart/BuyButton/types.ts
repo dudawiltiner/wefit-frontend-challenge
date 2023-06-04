@@ -1,3 +1,3 @@
 export interface BuyButtonProps {
-  name: string
+  name: string;
 }

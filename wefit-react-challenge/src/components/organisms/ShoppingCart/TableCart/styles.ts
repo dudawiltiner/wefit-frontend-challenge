@@ -37,4 +37,8 @@ export const Wrapper = styled.div`
   padding: 24px;
   margin: 0px 16px;
   border-radius: 4px;
+
+  @media (max-width: 545px) {
+    padding: 16px;
+  }
 `;

@@ -1,3 +1,3 @@
 export interface FooterProps {
-  total: number
+  total: number;
 }

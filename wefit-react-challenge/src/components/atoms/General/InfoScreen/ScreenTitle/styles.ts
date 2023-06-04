@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const ScreenTitleStyled = styled.p`
   font-weight: 700;
@@ -12,4 +12,4 @@ export const ScreenTitleStyled = styled.p`
   @media (max-width: 455px) {
     max-width: 200px;
   }
-`
+`;
