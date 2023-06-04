@@ -1,11 +1,11 @@
-import { useAtom } from 'jotai'
-import { productsSelectedAt } from '../../../../store'
-import { Title } from '../../../atoms/General/Menu'
-import BasketStatus from '../../../molecules/General/Menu/BasketStatus'
-import * as S from './styles'
+import { Title } from '@components/atoms/General/Menu';
+import BasketStatus from '@components/molecules/General/Menu/BasketStatus';
+import { productsSelectedAt } from '@store/index';
+import { useAtom } from 'jotai';
+import * as S from './styles';
 
 export default function Menu() {
-  const [productsSelected] = useAtom(productsSelectedAt)
+  const [productsSelected] = useAtom(productsSelectedAt);
 
   return (
     <S.Container>
@@ -14,5 +14,5 @@ export default function Menu() {
         <BasketStatus qtd={productsSelected.length} />
       </S.Wrapper>
     </S.Container>
-  )
+  );
 }

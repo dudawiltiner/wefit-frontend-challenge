@@ -1,16 +1,16 @@
 import {
   ScreenButton,
   ScreenImage,
-  ScreenTitle
-} from '../../../atoms/General/InfoScreen'
-import * as S from './styles'
-import { InfoScreenProps } from './types'
+  ScreenTitle,
+} from '@components/atoms/General/InfoScreen';
+import * as S from './styles';
+import { InfoScreenProps } from './types';
 
 export default function InfoScreen({
   title,
   image,
   link,
-  isPurchaseMade
+  isPurchaseMade,
 }: InfoScreenProps) {
   return (
     <S.Container isPurchaseMade={isPurchaseMade}>
@@ -18,5 +18,5 @@ export default function InfoScreen({
       <ScreenImage link={image} />
       <ScreenButton link={link} name="VOLTAR" />
     </S.Container>
-  )
+  );
 }

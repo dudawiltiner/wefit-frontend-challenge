@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const BuyButtonStyled = styled(Link)`
   display: flex;
@@ -22,4 +22,4 @@ export const BuyButtonStyled = styled(Link)`
     width: 100%;
     margin-top: 16px;
   }
-`
+`;

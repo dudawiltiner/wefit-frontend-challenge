@@ -1,10 +1,10 @@
-import * as S from './styles'
-import { InputProps } from './types'
+import * as S from './styles';
+import { InputProps } from './types';
 
 export default function InputNumber({
   value,
   handleSub,
-  handleAdd
+  handleAdd,
 }: InputProps) {
   return (
     <S.Container>
@@ -16,5 +16,5 @@ export default function InputNumber({
         <img src="src/assets/add.png" alt="Add Input" />
       </button>
     </S.Container>
-  )
+  );
 }

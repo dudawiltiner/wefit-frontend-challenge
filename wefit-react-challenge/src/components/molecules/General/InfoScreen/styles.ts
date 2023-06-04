@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 interface ContainerProps {
-  isPurchaseMade: boolean
+  isPurchaseMade: boolean;
 }
 
 export const Container = styled.div<ContainerProps>`
@@ -17,4 +17,4 @@ export const Container = styled.div<ContainerProps>`
   height: ${({ isPurchaseMade }) => (isPurchaseMade ? '574px' : '533px')};
   border-radius: 4px;
   background-color: ${({ theme }) => theme.colors.white};
-`
+`;

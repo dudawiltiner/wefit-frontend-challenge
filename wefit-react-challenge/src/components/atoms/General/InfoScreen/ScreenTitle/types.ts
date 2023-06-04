@@ -1,3 +1,3 @@
 export interface ScreenTitleProps {
-  name: string
+  name: string;
 }

@@ -1,9 +1,9 @@
-import { useGetProducts } from '../../../hooks/Home/use-get-products'
-import Loading from '../../molecules/General/Loading'
-import CardsContainer from '../../organisms/Home/CardsContainer'
+import Loading from '@components/molecules/General/Loading';
+import CardsContainer from '@components/organisms/Home/CardsContainer';
+import { useGetProducts } from '@hooks/Home/use-get-products';
 
 export default function HomeTemplate() {
-  const { isLoading } = useGetProducts()
+  const { isLoading } = useGetProducts();
 
-  return <div>{isLoading ? <Loading /> : <CardsContainer />}</div>
+  return <div>{isLoading ? <Loading /> : <CardsContainer />}</div>;
 }

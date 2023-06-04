@@ -1,4 +1,4 @@
-import { Description } from '../../../../atoms/ShoppingCart/TableCart'
+import { Description } from '@components/atoms/ShoppingCart/TableCart';
 
 export default function Header() {
   return (
@@ -18,5 +18,5 @@ export default function Header() {
         </th>
       </tr>
     </thead>
-  )
+  );
 }

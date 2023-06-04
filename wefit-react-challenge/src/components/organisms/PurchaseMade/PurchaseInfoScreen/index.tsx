@@ -1,5 +1,5 @@
-import InfoScreen from '../../../molecules/General/InfoScreen'
-import * as S from './styles'
+import InfoScreen from '@components/molecules/General/InfoScreen';
+import * as S from './styles';
 
 export default function PurchaseInfoScreen() {
   return (
@@ -11,5 +11,5 @@ export default function PurchaseInfoScreen() {
         link="/shoppingcart"
       />
     </S.Container>
-  )
+  );
 }

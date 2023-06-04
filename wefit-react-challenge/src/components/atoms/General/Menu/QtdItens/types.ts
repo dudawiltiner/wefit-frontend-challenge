@@ -1,3 +1,3 @@
 export interface QtdItensProps {
-  number: number
+  number: number;
 }

@@ -1,33 +1,48 @@
+import LoadingImage from '@components/atoms/General/Loading/LoadingImage';
+import Card from '@components/molecules/Home/Card';
+import Search from '@components/molecules/Home/Search';
+import SearchedText from '@components/molecules/Home/SearchedText';
+import { useGetProducts } from '@hooks/Home/use-get-products';
+import { productsSelectedAt } from '@store/index';
 import { useAtom } from 'jotai';
-import { useGetProducts } from '../../../../hooks/Home/use-get-products';
-import { productsSelectedAt } from '../../../../store';
-import Card from '../../../molecules/Home/Card';
+import { useSearchParams } from 'react-router-dom';
 import * as S from './styles';
 
 export default function CardsContainer() {
-  const { data } = useGetProducts();
-
+  const [searchParams] = useSearchParams();
+  const searchQuery = searchParams.get('search-query');
+  const { data, isLoading } = useGetProducts(searchQuery ?? '');
   const [productsSelected, setProductsSelected] = useAtom(productsSelectedAt);
 
   return (
     <S.Container>
-      <S.Wrapper>
-        {data?.map((product) => (
-          <Card
-            key={product.id}
-            link={product.image}
-            title={product.title}
-            price={product.price}
-            handleSelect={() =>
-              setProductsSelected([...productsSelected, product.id])
-            }
-            selected={
-              productsSelected.filter((el) => el === product.id).length !== 0
-            }
-            qtd={productsSelected.filter((el) => el === product.id).length}
-          />
-        ))}
-      </S.Wrapper>
+      <Search searchQuery={searchQuery} />
+      {searchQuery && (
+        <SearchedText searchQuery={searchQuery} qtd={data ? data?.length : 0} />
+      )}
+      {isLoading ? (
+        <S.LoadingContainer>
+          <LoadingImage />
+        </S.LoadingContainer>
+      ) : (
+        <S.Wrapper>
+          {data?.map((product) => (
+            <Card
+              key={product.id}
+              product={product}
+              handleSelect={() =>
+                setProductsSelected([...productsSelected, product.id])
+              }
+              selected={
+                productsSelected.filter((el) => el === product.id).length !== 0
+              }
+              selectedProductsQtd={
+                productsSelected.filter((el) => el === product.id).length
+              }
+            />
+          ))}
+        </S.Wrapper>
+      )}
     </S.Container>
   );
 }

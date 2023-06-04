@@ -1,10 +1,10 @@
 import {
   BuyButton,
   Description,
-  TotalText
-} from '../../../../atoms/ShoppingCart/TableCart'
-import * as S from './styles'
-import { FooterProps } from './types'
+  TotalText,
+} from '@components/atoms/ShoppingCart/TableCart';
+import * as S from './styles';
+import { FooterProps } from './types';
 
 export default function Footer({ total }: FooterProps) {
   return (
@@ -18,5 +18,5 @@ export default function Footer({ total }: FooterProps) {
         </S.WrapperTotal>
       </S.Wrapper>
     </S.Container>
-  )
+  );
 }

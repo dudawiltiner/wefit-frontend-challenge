@@ -1,3 +1,3 @@
 export interface CardImageProps {
-  link: string
+  link: string;
 }

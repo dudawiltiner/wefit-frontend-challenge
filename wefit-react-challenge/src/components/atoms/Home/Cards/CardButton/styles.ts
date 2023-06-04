@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 interface ButtonProps {
-  selected: boolean
+  selected: boolean;
 }
 
 export const ButtonStyled = styled.button<ButtonProps>`
@@ -15,7 +15,8 @@ export const ButtonStyled = styled.button<ButtonProps>`
   line-height: 16px;
   text-align: center;
   gap: 12px;
-  width: 287px;
+  max-width: 287px;
+  width: 100%;
   height: 40px;
   border: none;
   margin-top: 8px;
@@ -28,4 +29,4 @@ export const ButtonStyled = styled.button<ButtonProps>`
   @media (max-width: 390px) {
     width: 100%;
   }
-`
+`;

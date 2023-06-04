@@ -1,68 +1,43 @@
-import { CardImage, CardPrice, CardTitle } from '../../../../atoms/Home/Cards'
+import { CardImage, CardPrice } from '@components/atoms/Home/Cards';
 import {
   Description,
-  InputNumber
-} from '../../../../atoms/ShoppingCart/TableCart'
-import * as S from './styles'
-import { ItemProps } from './types'
+  InputNumber,
+} from '@components/atoms/ShoppingCart/TableCart';
+import * as S from './styles';
+import { ItemProps } from './types';
 
 export default function ItemMobile({
-  image,
-  title,
-  qtd,
-  price,
+  product,
+  selectedProductsQtd,
   handleSub,
   handleAdd,
-  handleRemoveAll
+  handleRemoveAll,
 }: ItemProps) {
   return (
     <S.Container>
       <S.ImageContainer>
-        <CardImage link={image} />
+        <CardImage link={product.image} />
       </S.ImageContainer>
-      <div
-        style={{
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          marginLeft: '16px'
-        }}
-      >
+      <S.Wrapper>
         <S.TitleAndPriceContainer>
-          <CardTitle name={title} />
-          <CardPrice number={price} />
-          <button
-            onClick={handleRemoveAll}
-            style={{
-              display: 'flex',
-              justifyContent: 'end',
-              background: 'transparent',
-              border: 'none',
-              cursor: 'pointer'
-            }}
-          >
+          <S.Title>{product.title}</S.Title>
+          <CardPrice number={product.price} />
+          <S.RemoveButton onClick={handleRemoveAll}>
             <img src="src/assets/trash.png" />
-          </button>
+          </S.RemoveButton>
         </S.TitleAndPriceContainer>
-        <div
-          style={{
-            width: '100%',
-            display: 'flex',
-            justifyContent: 'space-between'
-          }}
-        >
+        <S.WrapperDescription>
           <InputNumber
             handleSub={handleSub}
             handleAdd={handleAdd}
-            value={qtd}
+            value={selectedProductsQtd}
           />
           <S.Price>
             <Description name="SUBTOTAL" />
-            <CardPrice number={qtd * price} />
+            <CardPrice number={selectedProductsQtd * product.price} />
           </S.Price>
-        </div>
-      </div>
+        </S.WrapperDescription>
+      </S.Wrapper>
     </S.Container>
-  )
+  );
 }

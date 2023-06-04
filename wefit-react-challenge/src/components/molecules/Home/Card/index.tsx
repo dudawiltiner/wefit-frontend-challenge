@@ -2,32 +2,30 @@ import {
   CardButton,
   CardImage,
   CardPrice,
-  CardTitle
-} from '../../../atoms/Home/Cards'
-import * as S from './styles'
-import { CardProps } from './types'
+  CardTitle,
+} from '@components/atoms/Home/Cards';
+import * as S from './styles';
+import { CardProps } from './types';
 
 export default function Card({
   handleSelect,
-  link,
-  price,
-  title,
-  qtd,
-  selected
+  product,
+  selectedProductsQtd,
+  selected,
 }: CardProps) {
   return (
     <S.Container>
       <S.ImageContainer>
-        <CardImage link={link} />
+        <CardImage link={product.image} />
       </S.ImageContainer>
-      <CardTitle name={title} />
-      <CardPrice number={price} />
+      <CardTitle name={product.title} />
+      <CardPrice number={product.price} />
       <CardButton
         onClick={handleSelect}
-        number={qtd}
+        number={selectedProductsQtd}
         name="ADICIONAR AO CARRINHO"
         selected={selected}
       />
     </S.Container>
-  )
+  );
 }

@@ -1,11 +1,11 @@
-import * as S from './styles'
-import { CardButtonProps } from './types'
+import * as S from './styles';
+import { CardButtonProps } from './types';
 
 export default function CardButton({
   onClick,
   selected,
   number,
-  name
+  name,
 }: CardButtonProps) {
   return (
     <S.ButtonStyled selected={selected} type="button" onClick={onClick}>
@@ -13,5 +13,5 @@ export default function CardButton({
       <p>{number}</p>
       <p>{name}</p>
     </S.ButtonStyled>
-  )
+  );
 }

@@ -1,3 +1,3 @@
 export interface TotalTextProps {
-  number: number
+  number: number;
 }
