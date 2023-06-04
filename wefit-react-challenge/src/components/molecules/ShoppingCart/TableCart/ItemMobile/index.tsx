@@ -1,10 +1,10 @@
-import { CardImage, CardPrice, CardTitle } from '../../../../atoms/Home/Cards'
+import { CardImage, CardPrice } from '../../../../atoms/Home/Cards';
 import {
   Description,
-  InputNumber
-} from '../../../../atoms/ShoppingCart/TableCart'
-import * as S from './styles'
-import { ItemProps } from './types'
+  InputNumber,
+} from '../../../../atoms/ShoppingCart/TableCart';
+import * as S from './styles';
+import { ItemProps } from './types';
 
 export default function ItemMobile({
   image,
@@ -13,7 +13,7 @@ export default function ItemMobile({
   price,
   handleSub,
   handleAdd,
-  handleRemoveAll
+  handleRemoveAll,
 }: ItemProps) {
   return (
     <S.Container>
@@ -26,11 +26,11 @@ export default function ItemMobile({
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          marginLeft: '16px'
+          marginLeft: '16px',
         }}
       >
         <S.TitleAndPriceContainer>
-          <CardTitle name={title} />
+          <S.Title>{title}</S.Title>
           <CardPrice number={price} />
           <button
             onClick={handleRemoveAll}
@@ -39,7 +39,7 @@ export default function ItemMobile({
               justifyContent: 'end',
               background: 'transparent',
               border: 'none',
-              cursor: 'pointer'
+              cursor: 'pointer',
             }}
           >
             <img src="src/assets/trash.png" />
@@ -49,7 +49,7 @@ export default function ItemMobile({
           style={{
             width: '100%',
             display: 'flex',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
           }}
         >
           <InputNumber
@@ -64,5 +64,5 @@ export default function ItemMobile({
         </div>
       </div>
     </S.Container>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import { CardImage, CardPrice, CardTitle } from '../../../Home/Cards'
-import * as S from './styles'
-import { ProductProps } from './types'
+import { CardImage, CardPrice, CardTitle } from '../../../Home/Cards';
+import * as S from './styles';
+import { ProductProps } from './types';
 
 export default function Product({ image, title, price }: ProductProps) {
   return (
@@ -13,5 +13,5 @@ export default function Product({ image, title, price }: ProductProps) {
         <CardPrice number={price} />
       </S.DescriptionContainer>
     </S.Container>
-  )
+  );
 }

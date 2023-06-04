@@ -1,7 +1,7 @@
-import { CardPrice } from '../../../../atoms/Home/Cards'
-import { InputNumber, Product } from '../../../../atoms/ShoppingCart/TableCart'
-import * as S from './styles'
-import { ItemProps } from './types'
+import { CardPrice } from '../../../../atoms/Home/Cards';
+import { InputNumber, Product } from '../../../../atoms/ShoppingCart/TableCart';
+import * as S from './styles';
+import { ItemProps } from './types';
 
 export default function Item({
   image,
@@ -10,7 +10,7 @@ export default function Item({
   price,
   handleSub,
   handleAdd,
-  handleRemoveAll
+  handleRemoveAll,
 }: ItemProps) {
   return (
     <tr>
@@ -31,12 +31,12 @@ export default function Item({
             justifyContent: 'end',
             background: 'transparent',
             border: 'none',
-            cursor: 'pointer'
+            cursor: 'pointer',
           }}
         >
           <img src="src/assets/trash.png" />
         </button>
       </td>
     </tr>
-  )
+  );
 }

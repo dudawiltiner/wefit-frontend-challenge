@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Price = styled.td`
   width: 25%;
@@ -6,4 +6,4 @@ export const Price = styled.td`
   @media (max-width: 640px) {
     width: 18%;
   }
-`
+`;

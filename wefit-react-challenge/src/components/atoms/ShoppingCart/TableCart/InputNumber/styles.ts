@@ -1,8 +1,8 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 
   button {
@@ -10,7 +10,7 @@ export const Container = styled.div`
     border: none;
     cursor: pointer;
   }
-`
+`;
 
 export const InputStyled = styled.p`
   font-weight: 400;
@@ -25,4 +25,4 @@ export const InputStyled = styled.p`
   color: ${({ theme }) => theme.colors.darkBlue};
   border: 1px solid #d9d9d9;
   border-radius: 4px;
-`
+`;

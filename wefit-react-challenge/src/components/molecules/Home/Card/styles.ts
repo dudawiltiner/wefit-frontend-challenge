@@ -1,20 +1,14 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px 11px;
-  width: max-content;
   border-radius: 4px;
-  margin: 8px 8px;
   background-color: ${({ theme }) => theme.colors.white};
-
-  @media (max-width: 390px) {
-    width: 100%;
-    margin: 8px 16px;
-  }
-`
+  width: 100%;
+`;
 
 export const ImageContainer = styled.div`
   width: 147px;
@@ -22,4 +16,4 @@ export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
+`;
