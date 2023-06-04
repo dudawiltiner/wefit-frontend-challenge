@@ -27,7 +27,7 @@ A solução do desafio front-end React foram utilizadas as seguintes tecnologias
 [ReactQuery](https://react-query-v3.tanstack.com/)<br>
 
 
-Para o desafio do JavaScript eu tentei resolver os testes diferentes formas usando lógica de programação. E na aplicação React tentei trazer algumas tecnologias novas que ajudam bastante no desenvolvimento.
+Para o desafio do JavaScript eu tentei resolver os testes diferentes formas usando lógica de programação./ e manipulação de APIs Java Script E na aplicação React tentei trazer algumas tecnologias novas que ajudam bastante no desenvolvimento e  na qualidade do código que é o Eslint, Prettier, Commitzen e Vite. O Eslint e Prettier ajudam na qualidade de escrita do código e por isso o desenvolvimento da lógica se torna bem mais focado. O Vite acelera iniciar sua aplicação React em poucos milesegundos e sabemos como o tempo importa quando está desenvolvendo o front-end. Já o Commitizen ajuda a deixar o controle de versionamento mais bem estrutura e descrito, sabemos o quanto commits organizados ajudam a identificar bugs e documentar avanços na aplicação, então como consequência permite dar mais atenção ao que está de fato sendo desenvolvido.
 
 ---
 
@@ -46,11 +46,11 @@ Para o desafio do JavaScript eu tentei resolver os testes diferentes formas usan
   git clone https://github.com/dudawiltiner/wefit-frontend-challenge.git
 ```
 
-### Instalação das dependências
+### Rode o Desafio React
 
 3. Entre no diretório criado após a clonagem do repositório.
 ```javascript
-  cd desafio-wefit/wefit-frontend-challenge
+  cd desafio-wefit/wefit-frontend-challenge/wefit-react-challenge
 ```
 
 4. Instale as dependencias.
@@ -58,18 +58,20 @@ Para o desafio do JavaScript eu tentei resolver os testes diferentes formas usan
   yarn
 ```
 
-5. Instale o jason-server globalmene.
+5. Realize o start do Server.
 ```javascript
-  npm -g json-server
+  yarn run server
 ```
 
-6. Realize o start da API.
-```javascript
-  json-server --watch src/services/db.json
-```
-
-7. Realize o start da Aplicacao.
+6. Realize o start da Aplicacao.
 ```javascript
   yarn run dev
 ```
+### Rode o Desafio JavaScript
 
+7. Entre no diretório criado após a clonagem do repositório.
+```javascript
+  cd desafio-wefit/wefit-frontend-challenge/wefit-test-js-assets/wefit-test
+```
+
+8. Você pode usar o Go Live para renderizar a página no seu navegador usando o VSC.
