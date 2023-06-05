@@ -50,7 +50,7 @@ Para o desafio do JavaScript eu tentei resolver os testes diferentes formas usan
 
 3. Entre no diretório criado após a clonagem do repositório.
 ```javascript
-  cd desafio-wefit/wefit-frontend-challenge/wefit-react-challenge
+  cd wefit-frontend-challenge/wefit-react-challenge
 ```
 
 4. Instale as dependencias.
@@ -76,7 +76,7 @@ Para o desafio do JavaScript eu tentei resolver os testes diferentes formas usan
 
 8. Entre no diretório criado após a clonagem do repositório.
 ```javascript
-  cd desafio-wefit/wefit-frontend-challenge/wefit-test-js-assets/wefit-test
+  cd wefit-frontend-challenge/wefit-test-js-assets/wefit-test
 ```
 
 9. Você pode usar o Go Live para renderizar a página no seu navegador usando o VSC.
